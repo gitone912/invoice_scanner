@@ -1,0 +1,10 @@
+# railway.yml
+services:
+  - name: web
+    env:
+      # Add any other environment variables needed for your Django app
+      - SECRET_KEY=<your-secret-key>
+    build:
+      # Add any other build steps needed for your Django app
+      - npm install
+      - apt-get update && apt-get install -y tesseract-ocr
