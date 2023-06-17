@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Invoice</title>
+</head>
+<body>
+  <h1>Upload Invoice</h1>
+  <form method="post" enctype="multipart/form-data" action="{% url 'upload_invoice' %}">
+    {% csrf_token %}
+    <label for="invoice_image">Select Image:</label>
+    <input type="file" name="invoice_image" id="invoice_image" required><br><br>
+    <label for="scheduled_time">Scheduled Time:</label>
+    <input type="datetime-local" name="scheduled_time" id="scheduled_time" required><br><br>
+    <input type="submit" value="Upload">
+  </form>
+</body>
+</html>
