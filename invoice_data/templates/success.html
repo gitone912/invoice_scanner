@@ -2,10 +2,35 @@
 <html>
 <head>
   <title>Success</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Success!</h1>
-  <p>The invoice has been uploaded successfully.</p>
-  <p>{{extracted_details|safe}}</p>
+  <nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1">Invoice Scanner</span>
+  </nav>
+
+  <div class="container">
+    <h1>Success!</h1>
+    <p>The invoice has been uploaded successfully.</p>
+    <p>{{ extracted_details|safe }}</p>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2023 Invoice Scanner. All rights reserved.</p>
+  </footer>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
